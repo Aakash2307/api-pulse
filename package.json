@@ -12,6 +12,23 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "apiPulse",
+          "title": "API Pulse",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "apiPulse": [
+        {
+          "id": "apiPulse.apis",
+          "name": "APIs"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "api-pulse.helloWorld",
