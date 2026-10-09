@@ -25,16 +25,28 @@
       "apiPulse": [
         {
           "id": "apiPulse.apis",
-          "name": "APIs"
+          "name": "APIs" ,
+          "icon": "media/icon.svg"
+          
         }
       ]
     },
     "commands": [
       {
-        "command": "api-pulse.helloWorld",
-        "title": "Hello World"
+        "command": "apiPulse.addApi",
+        "title": "API Pulse: Add API",
+        "icon": "$(add)"
       }
-    ]
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "apiPulse.addApi",
+          "when": "view == apiPulse.apis",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
